@@ -145,6 +145,7 @@ if CUDA is not None:
 setup(
     name='fnms',
     ext_modules=ext_modules,
+    packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     cmdclass={
         'upload': UploadCommand,
         'build_ext': CustomBuildExt
